@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Customer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" type="text/css" href="Customer.css">
+        <script type="text/javascript">
+            function validated()
+            {
+            var id=document.f2.cid.value;
+            if(id.length>4)
+            {
+                alert("Invalid ID Entered!Please Enter 4 digit ID");
+                return false;
+            }
+            return true;
+        }
+    
+        </script>
+    </head>
+    <body  style="background-image: url('w1.webp'); background-repeat: no-repeat; background-size: cover;  height: 100vh;">
+    <center> <h1 style="color: white">Customer New Registration</h1></center><br><br>
+        <div class="c3">
+             <img src="logo.jpg" class="avatar">
+           <form name="f2" method="post" action="Customer">
+            
+                    <p>CustomerId</p>
+                    <input type="text" name="customer_id" required>
+                
+                    <p>CustomerName</p>
+                    <input type="text" name="customer_name" required>
+                
+                    <p>PhoneNumber</p>
+                    <input type="text" name="pnumber" required>
+                
+                    <p>Address</p>
+                    <input type="text" name="address" required>
+                
+                    <p>Email</p>
+                    <input type="email" name="email" required>
+                
+                    <p>Password</p>
+                    <input type="password" name="pwd">
+              <center><input type="submit" value="signup" onclick="return validated()"/></center>
+          </form>  
+       
+    </div>
+    </body>
+</html>
